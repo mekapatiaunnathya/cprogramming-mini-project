@@ -1,0 +1,112 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define MAX_ACCOUNTS 100
+typedf struct {
+    int accounntNumber;
+    char name[50];
+    float balance;
+}Account;
+Account accounts[MAX_ACCOUNTS];
+int accountcount=0;
+void createAccount(){
+    if(accountcount>=
+    MAX_ACCOUNT){
+        printf("Maximum accountlimit reached!\n");
+        return;
+    }
+    printf("Enter Account Number:");
+    scanf("%d",&accounts[accountcount].account Number);
+    printf("Enter Name:");
+    scanf("[^\n"],accounts[accountcount].name);
+    accounts[accountcount].balance=0.0;
+    accountcount++;
+    printf("Account createdsuccessfully!\n");
+    void depositMoney(){
+        int accountNumber;
+        float amout;
+        printf("Enter Account Number:");
+        scanf("%d",&accountNumber);
+        for(int i=0;i<acccountcount; i++){
+            if
+            (accounts[i].accountNumber==accountNumber){
+                printf("Enter Amount to Deposit:");
+                scanf("%f",&amount);
+                if(amount<=0){
+                    printf("Invalid amount.Deposit failed.\n");
+                    return;
+                }
+            }
+            printf("Account not foud.\n");
+        }
+        void withdrawMoney(){
+            int accountNumber;
+            float amount;
+            printf("Enter AccountNumber:");
+            scanf("%d",&accountNumber);
+            for(int i=0;i<accountcount;i++){
+                if
+                (accounts[i].accountNumber==accountNumber){
+                    printf("Enter Amount to Withdraw:");
+                    scanf("%f",&amount);
+                    if(amount<=0||amount > accounts][i].balance){
+                        printf("Invalid amount or insufficient balance.Withdrawal failed.\n");
+                        return;
+                    }
+                    accounts[i].balance-=amount;
+                    printf("Withdral successful! New Balance:%.2f\n",accounts[i].balance);
+                    return;
+                }
+            }
+            printf("Account not found.\n");
+        }
+        void displayAccoutDetails(){
+            int accountNumber;
+            printf("Enter Account Number:");
+            scanf("%d",&accountnumber);
+            for (int i=0;i<account number;i++){
+                if
+                (accounts[i].accountnumber==accountNumber){
+                    printf("\nAccountNumber:%d\n",accounts[ii].accountNumber);
+                    printf("Name:%s\n",accounts[i].balance);
+                    returnn;
+                }
+            }
+            printf("Account not found\n");
+        }
+        void minisystem(){
+            printf("\n*** Mini Bank system***\n");
+            printf("1. create new account\n");
+            printf("2.deposit money\n");
+            printf("3.withdraw money\n";
+            printf("4.display account details\n");
+            printf("5.exit\n");
+            int choice;
+            while(1){
+                printf("\nchoose an option:");
+                scanf("%d",&choice);
+                switch(choice){
+                    case 1:
+                    createaccount();
+                    break;
+                    case 2:
+                    depositmoney();
+                    break;
+                    case 3:
+                    withdrawmoney();
+                    break;
+                    case 4:
+                    displayaccountdetails();
+                    break;
+                    case 5:
+                    printf("Exiting the system.Thank you!\n");
+                    return;
+                    default:
+                    printf("Invalid option.Try again.\n");
+                }
+            }
+        }
+        int main(){
+        minisystem();
+        return 0;
+            }
